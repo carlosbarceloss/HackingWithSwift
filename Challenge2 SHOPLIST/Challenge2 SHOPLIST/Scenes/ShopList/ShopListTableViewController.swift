@@ -20,7 +20,8 @@ class ShopListTableViewController: UITableViewController {
     
     @objc func clearList() {
         let ac = UIAlertController(title: "Atenção!", message: "A lista será apagada e os itens serão perdidos. Deseja continuar?", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continuar", style: .default) { [weak self] _ in
+        ac.addAction(UIAlertAction(title: "Continuar", style: .default) {
+            [weak self] _ in
             self?.shopList.removeAll()
             self?.tableView.reloadData()
         })
